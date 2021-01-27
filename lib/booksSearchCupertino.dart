@@ -42,7 +42,7 @@ class BooksSearchCupertino extends StatelessWidget {
               break;
             case 1:
               return CupertinoTabView(
-                builder: (BuildContext context){
+                builder: (BuildContext context) {
                   return BlocProvider(
                       child: SearchBooks(),
                       bloc: UserBloc());

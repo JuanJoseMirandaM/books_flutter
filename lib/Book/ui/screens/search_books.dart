@@ -22,6 +22,8 @@ class _SearchBooksState extends State<SearchBooks> {
   List _allResults = [];
   List _resultsList = [];
 
+  Stream<QuerySnapshot> _stream;
+
   @override
   void initState() {
     super.initState();
@@ -79,18 +81,18 @@ class _SearchBooksState extends State<SearchBooks> {
                     )
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 20.0),
-                child: TextField(
-                  onChanged: (value){
-                    print("FDFDFDFD"+value);
-                  },
-                  controller: _searchController,
-                  decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.search)
-                  ),
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 20.0),
+              //   child: TextField(
+              //     onChanged: (value){
+              //       print("FDFDFDFD"+value);
+              //     },
+              //     controller: _searchController,
+              //     decoration: InputDecoration(
+              //         prefixIcon: Icon(Icons.search)
+              //     ),
+              //   ),
+              // ),
               Expanded(
                 child: ListView.builder(
                   itemCount: _resultsList.length,
