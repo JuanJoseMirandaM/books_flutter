@@ -25,7 +25,7 @@ class DescriptionBook extends StatelessWidget {
       stream: userBloc.bookSelectedStream,
       builder: (BuildContext context, AsyncSnapshot<Book> snapshot){
         if (snapshot.hasData) {
-          print("PLACE SELECTED: ${snapshot.data.title}");
+          print("BOOK SELECTED: ${snapshot.data.title}");
           Book book = snapshot.data;
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,

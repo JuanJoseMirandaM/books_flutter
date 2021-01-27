@@ -53,21 +53,30 @@ class _SignInScreen extends State<SignInScreen> {
         children: <Widget>[
           GradientBack(height: null,),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Flexible(
-                  child: Container(
-                    width: screenWidth,
-                    child: Text("Welcome \nThis is your Search Books App",
-                      style: TextStyle(
-                          fontSize: 37.0,
-                          fontFamily: "Lato",
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold
-                      ),
-                    ),
-                  )
+              SizedBox(
+                height: 350.0,
+                child: Image.asset(
+                  "assets/img/logos.png",
+                  fit: BoxFit.contain,
+                ),
               ),
+              // Flexible(
+              //     child: Container(
+              //       width: screenWidth,
+              //       child: Text("GESTOR DE DESCARGA DE UNA BIBLIOTECA",
+              //         style: TextStyle(
+              //             fontSize: 37.0,
+              //             fontFamily: "Lato",
+              //             color: Colors.white,
+              //             fontWeight: FontWeight.bold
+              //         ),
+              //       ),
+              //     )
+              // ),
+              // SizedBox(height: 15.0),
               ButtonGreen(
                 text: "Login with Gmail",
                 onPressed: (){
@@ -88,8 +97,6 @@ class _SignInScreen extends State<SignInScreen> {
               //   Buttons.Google,
               //   onPressed: () {},
               // )
-
-
             ],
           )
         ],
